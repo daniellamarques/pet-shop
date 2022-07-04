@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Imagens
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="small">Visualize a foto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-col *ngFor="let photo of Photoservice.photos; index as position">
+      <ion-img [src]="photo.webviewPath"></ion-img>
+    </ion-col>
+  </ion-item>
+
+
+<p></p>
+<ion-button color="primary" expand="block" (click)="exibirAlerta()">Voltar</ion-button>
+
+
+
+</ion-content>
